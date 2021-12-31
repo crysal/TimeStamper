@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>TimeStamper</title>
+</head>
+<body>
+<input type="datetime-local" name="myDate" class="myDate"/> <br>
+<div name="result" class="result"></div>
+</body>
+<script>
+let setTime = 0
+document.addEventListener("keyup", function(){
+setTime = document.getElementsByName("myDate")[0].valueAsNumber / 1000
+sendback = '&ltt:' + setTime + ':F&gt'
+document.getElementsByName("result")[0].innerHTML = sendback;
+}); 
+</script>
+</html>
